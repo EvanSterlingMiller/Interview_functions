@@ -52,3 +52,16 @@ function timeConversion(s) {
 
     return `${formattedHour}:${formattedMinute}:${formattedSecond}`;
 }
+
+function timeConversion(s) {
+    const timeCode = s.slice(-2);
+    let [hour, minute, second] = s.slice(0, -2).split(":");
+
+    if (timeCode === "PM" && hour !== "12") {
+        hour = String(Number(hour) + 12);
+    } else if (timeCode === "AM" && hour === "12") {
+        hour = "00";
+    }
+
+    return `${hour}:${minute}:${second}`;
+}
