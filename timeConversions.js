@@ -53,6 +53,7 @@ function timeConversion(s) {
     return `${formattedHour}:${formattedMinute}:${formattedSecond}`;
 }
 
+//working code
 function timeConversion(s) {
     const timeCode = s.slice(-2);
     let [hour, minute, second] = s.slice(0, -2).split(":");
@@ -63,5 +64,5 @@ function timeConversion(s) {
         hour = "00";
     }
 
-    return `${hour}:${minute}:${second}`;
+    return `${hour}:${minute}:${second}`; 
 }
